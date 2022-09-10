@@ -122,3 +122,7 @@ main {
 .display-block {
   display: block;
 }
+
+.rotate {
+  transform: rotate(180deg);
+}
