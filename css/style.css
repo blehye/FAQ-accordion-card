@@ -7,6 +7,9 @@ body {
   height: 100vh;
   font-family: "Kumbh Sans", sans-serif;
   background: linear-gradient(var(--soft-violet), var(--soft-blue));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 main {
@@ -20,50 +23,102 @@ main {
 .main-wrap {
   position: relative;
   display: flex;
-  width: 900px;
+  width: 1000px;
   height: 560px;
   border-radius: 20px;
-  box-shadow: 0 0 10px black;
+  box-shadow: 0 20px 70px -30px black;
   background-color: white;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   overflow: hidden;
 }
 
 .main-img {
-  position: relative;
-
-  width: 50%;
-  height: 100%;
-  position: relative;
+  position: absolute;
+  left: -600px;
+  top: -290px;
 }
 
-.main-img-background {
-  width: 100%;
-  height: 100%;
-  background-image: url("../images/bg-pattern-desktop.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: absolute;
-  left: -100px;
-}
-
-.main-img-box {
-  position: absolute;
-  left: 0;
+.main-img img {
+  width: 1000px;
 }
 
 .main-img-woman {
   position: absolute;
-  left: 60px;
+  left: -90px;
+  top: 80px;
+}
+
+.main-img-woman img {
+  width: 490px;
+}
+
+.main-img-box {
+  position: fixed;
+  left: calc(50% - 630px);
+  top: 320px;
 }
 
 .main-content {
   width: 50%;
+  height: 100%;
+  box-sizing: border-box;
+  padding-left: 20px;
 }
 
 .main-content-header {
   font-weight: 600;
-  font-size: 40px;
+  font-size: 35px;
+  margin-top: 70px;
+  margin-bottom: 30px;
+  color: var(--very-dark-desaturated-blue);
+}
+
+.main-content-detail-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0px;
+  cursor: pointer;
+  color: var(--very-dark-grayish-blue);
+  font-weight: 400;
+}
+
+.main-content-detail-question:hover {
+  color: var(--soft-red);
+}
+
+.main-content-detail-question img {
+  width: 13px;
+}
+
+.main-content-detail-faq {
+  width: 400px;
+  border-bottom: 1px solid var(--light-grayish-blue);
+}
+
+.main-content-detail {
+  height: 380px;
+  overflow-y: scroll;
+}
+
+.main-content-detail::-webkit-scrollbar {
+  display: none;
+}
+
+.main-content-detail-answer {
+  margin-bottom: 20px;
+  display: none;
+  color: var(--dark-grayish-blue);
+  line-height: 20px;
+}
+
+.question-bold {
+  color: var((--very-dark-desaturated-blue)) !important;
+  font-weight: 700 !important;
+}
+
+.display-block {
+  display: block;
 }
